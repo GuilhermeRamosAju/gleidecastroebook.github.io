@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fertilidade Consciente</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* --- RESET E ESTILOS GERAIS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #faf8fb;
+            color: #4a3b57;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+            color: #2d1d39;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: #7a6987;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(230, 220, 240, .5), transparent 60%);
+            padding-top: 100px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            max-width: 900px;
+            margin: 0 auto 20px;
+        }
+
+        .hero .subtitle {
+            font-size: 28px;
+            color: #d4ab86;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 20px;
+            color: #6d5c7d;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #d9b28f;
+            color: white;
+            padding: 18px 42px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #cda27c;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            color: #6f5b7d;
+            font-size: 15px;
+        }
+
+        .hero-image {
+            margin-top: 60px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .08);
+        }
+
+        /* --- EBOOK --- */
+        .ebook {
+            background: #e8dff0;
+        }
+
+        .ebook-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .ebook h2 {
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+
+        .ebook p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #5d4e68;
+        }
+
+        .ebook-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+        }
+
+        .ebook-card li {
+            list-style: none;
+            margin-bottom: 14px;
+            font-size: 17px;
+        }
+
+        .ebook-image img {
+            width: 100%;
+            border-radius: 30px;
+            border: 2px solid white;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .08);
+        }
+
+        /* --- CARDS APRENDER --- */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #eadff0;
+            padding: 35px;
+            border-radius: 20px;
+            transition: .3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+        }
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: #f4eefd;
+            /* Tom lilás bem suave de fundo */
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: #7b5da7;
+            /* Cor roxa idêntica à imagem para o contorno do ícone */
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 15px;
+            color: #555;
+        }
+
+        /* --- PILARES --- */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .pillar {
+            background: white;
+            border: 1px solid #eadff0;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: .3s;
+        }
+
+        .pillar:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+        }
+
+        .pillar-circle {
+            width: 60px;
+            height: 60px;
+            background: #f3d7e7;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+
+        .pillar h4 {
+            font-size: 24px;
+        }
+
+        /* --- COMPARATIVO TRANSFORMAÇÃO --- */
+        .compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .compare-box {
+            background: white;
+            border: 1px solid #eadff0;
+            border-radius: 25px;
+            padding: 40px;
+        }
+
+        .compare-box h3 {
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
+
+        .compare-box ul {
+            padding-left: 20px;
+        }
+
+        .compare-box li {
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .center-text {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 22px;
+            color: #4e3a5c;
+            font-family: 'Lora', serif;
+            font-weight: 600;
+        }
+
+        /* --- PÚBLICO ALVO --- */
+        .target-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .target-item {
+            background: white;
+            border: 1px solid #eadff0;
+            border-radius: 18px;
+            padding: 30px;
+            font-size: 18px;
+        }
+
+        /* --- SEÇÃO: NÃO É PARA QUEM --- */
+        .not-for {
+            text-align: center;
+            background: #fdfbfd;
+        }
+
+        .grid-not-for {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+        }
+
+        .card-not-for {
+            background: #ffffff;
+            border: 1px solid #f3eff7;
+            padding: 24px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .icon-cross {
+            border: 1px solid #d9a3a3;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c97d7d;
+            font-size: 16px;
+            flex-shrink: 0;
+            background: #fff5f5;
+        }
+
+        .card-not-for p {
+            font-size: 15px;
+            color: #555;
+        }
+
+        /* --- CARD DE OFERTA PRINCIPAL --- */
+        .offer-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #f3eff7;
+            border-radius: 24px;
+            padding: 45px 35px;
+            box-shadow: 0 15px 40px rgba(43, 24, 58, 0.06);
+            position: relative;
+        }
+
+        .offer-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #e9e3f3, #f7f1f9, #e9e3f3);
+        }
+
+        .offer-card h3 {
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            max-width: 320px;
+            margin: 0 auto 35px auto;
+            text-align: left;
+        }
+
+        .benefits-list li {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .benefits-list .check {
+            color: #d9b28f;
+            font-weight: bold;
+        }
+
+        .price-box {
+            margin-bottom: 10px;
+        }
+
+        .price-value {
+            color: #d9b28f;
+            font-size: 60px;
+            font-weight: 700;
+            display: block;
+            font-family: 'Lora', serif;
+        }
+
+        .price-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #a0a0a0;
+            font-weight: 600;
+        }
+
+        .btn-cta {
+            display: block;
+            width: 100%;
+            background-color: #d9b28f;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            padding: 18px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 24px;
+            box-shadow: 0 5px 15px rgba(217, 178, 143, 0.3);
+        }
+
+        .btn-cta:hover {
+            background-color: #cda27c;
+        }
+
+        .secure-footer {
+            margin-top: 16px;
+            font-size: 13px;
+            color: #b0b0b0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        /* --- SOBRE A ESPECIALISTA --- */
+        .about {
+            background-color: #ffffff;
+            border-top: 1px solid #f6f1fb;
+            border-bottom: 1px solid #f6f1fb;
+        }
+
+        .about-grid {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-image-wrapper {
+            flex: 5;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-image-container {
+            background-color: #f6f1fb;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #efe9f5;
+            max-width: 350px;
+            width: 100%;
+        }
+
+        .about-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            min-height: 380px;
+        }
+
+        .about-text {
+            flex: 7;
+        }
+
+        .about-text h2 {
+            font-size: 46px;
+            margin-bottom: 5px;
+        }
+
+        .about-subtitle {
+            color: #d9b28f;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-description {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        /* --- SEÇÃO DOS 8 PILARES --- */
+        .pillars-section {
+            background-color: #fcfbfe;
+            padding: 80px 0;
+        }
+
+        /* Unificado em um grid de até 4 colunas que quebra automaticamente em telas menores */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .pillar {
+            background: white;
+            border: 1px solid #f5edf7;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(43, 24, 58, 0.01);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pillar:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(43, 24, 58, 0.03);
+        }
+
+        .pillar-circle {
+            width: 44px;
+            height: 44px;
+            background: #f7e8ec;
+            /* Tom rosé suave de fundo */
+            border-radius: 50%;
+            margin: 0 auto 18px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pillar-circle svg {
+            width: 20px;
+            height: 20px;
+            stroke: #a26875;
+            /* Vinho/Rosé escuro para o traço do ícone */
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .pillar h4 {
+            font-family: 'Lara', serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #2b183a;
+        }
+
+        /* Estilização da frase dourada no final da seção */
+        .pillars-quote {
+            text-align: center;
+            font-family: 'Lara', serif;
+            font-size: 26px;
+            color: #d4ab86;
+            margin-top: 50px;
+            font-weight: 500;
+        }
+
+        /* Responsividade para tablets e celulares */
+        @media (max-width: 980px) {
+            .pillars-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 colunas em tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pillars-grid {
+                grid-template-columns: 1fr;
+                /* 1 coluna no celular */
+            }
+
+            .pillars-quote {
+                font-size: 20px;
+                padding: 0 15px;
+            }
+        }
+
+        /* --- PERGUNTAS FREQUENTES (FAQ) --- */
+        /* --- PERGUNTAS FREQUENTES (FAQ) --- */
+        .faq-wrapper {
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #f3eff7;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+            transition: background 0.3s ease;
+        }
+
+        .faq-trigger {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+            color: #2b183a;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .faq-arrow {
+            color: #b0b0b0;
+            font-size: 12px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        /* Estado oculto/fechado por padrão */
+        .faq-content {
+            max-height: 0;
+            /* Começa com altura zero */
+            overflow: hidden;
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+            padding: 0px 22px;
+            /* Remove o padding vertical enquanto fechado para não dar pulos na tela */
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+
+        /* Quando o item estiver ativo, adicionamos o padding de volta */
+        .faq-item.active .faq-content {
+            margin-top: 10px;
+            border-top: 1px solid #faf8fc;
+        }
+
+        .faq-item.active .faq-arrow {
+            color: #d9b28f;
+            /* Muda a cor da seta quando aberto (opcional) */
+        }
+
+        /* --- BANNER FINAL --- */
+        .final-banner {
+            background-color: #e6def1;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 24px;
+            margin-top: 40px;
+        }
+
+        .final-banner-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .final-banner h3 {
+            font-size: 38px;
+            margin-bottom: 16px;
+        }
+
+        .final-banner p {
+            font-size: 16px;
+            color: #5d4e68;
+            margin-bottom: 30px;
+        }
+
+        .btn-final {
+            background-color: #ffffff;
+            color: #2d1d39;
+            border: none;
+            border-radius: 12px;
+            padding: 16px 36px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: .3s ease;
+        }
+
+        .btn-final:hover {
+            background-color: #fdfbfd;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            color: #8b7a98;
+            font-size: 14px;
+            border-top: 1px solid #eadff0;
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media(max-width: 980px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero .subtitle {
+                font-size: 22px;
+            }
+
+            .section-title h2,
+            .ebook h2 {
+                font-size: 36px;
+            }
+
+            .ebook-grid,
+            .cards,
+            .pillars-grid,
+            .compare,
+            .target-grid,
+            .grid-not-for {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .about-text {
+                text-align: center;
+            }
+
+            .about-pillars {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <h1>A fertilidade não começa no teste positivo.</h1>
+            <div class="subtitle">Ela começa na forma como você cuida do seu corpo hoje.</div>
+            <p>Descubra como preparar seu corpo, sua mente e seu ambiente para uma gestação saudável de forma natural e
+                consciente.</p>
+
+            <a href="#" class="btn">Quero começar minha jornada</a>
+
+            <div class="hero-features">
+                <span>✔ Acesso imediato</span>
+                <span>✔ Leitura prática</span>
+                <span>✔ Método natural e consciente</span>
+            </div>
+
+            <div class="hero-image">
+                <img src="img/img1.jpeg" alt="Preparação saudável para gestação">
+            </div>
+        </div>
+    </section>
+
+    <section class="ebook">
+        <div class="container">
+            <div class="ebook-grid">
+                <div>
+                    <h2>E-book Fertilidade Consciente</h2>
+                    <p>Um guia completo e prático para mulheres que desejam preparar o corpo de forma natural e
+                        consciente para a maternidade.</p>
+                    <div class="ebook-card">
+                        <ul>
+                            <li>✔ Sem fórmulas milagrosas</li>
+                            <li>✔ Sem promessas irreais</li>
+                            <li>✔ Com clareza, consciência e direção</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ebook-image">
+                    <img src="img/img2.jpeg" alt="Capa do Ebook Fertilidade Consciente">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>O que você vai aprender</h2>
+                <p>Conteúdo prático e aplicável para transformar sua jornada de fertilidade</p>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
+                    <h3>Entender os sinais do corpo</h3>
+                    <p>Aprenda a interpretar os sinais naturais que seu corpo envia durante o ciclo menstrual</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Melhorar a rotina hormonal</h3>
+                    <p>Descubra práticas diárias que favorecem o equilíbrio hormonal de forma natural</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3>Criar hábitos favoráveis</h3>
+                    <p>Construa uma rotina que apoia a fertilidade e o bem-estar integral</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Reduzir fatores que afetam hormônios</h3>
+                    <p>Identifique e minimize elementos do dia a dia que podem interferir na saúde hormonal</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2v4M2 12h4M12 18v4M18 12h4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Preparar o corpo para gestação</h3>
+                    <p>Crie as condições ideais para que seu corpo esteja pronto para a maternidade</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Construir uma rotina mais consciente</h3>
+                    <p>Desenvolva consciência sobre suas escolhas e como elas impactam sua fertilidade</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pillars-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Os 8 pilares da fertilidade consciente</h2>
+                <p>Áreas fundamentais que impactam diretamente sua saúde hormonal e fertilidade</p>
+            </div>
+
+            <div class="pillars-grid">
+                <div class="pillar">
+                    <div class="pillar-circle">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-4.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2zM14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-4.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2z" />
+                        </svg>
+                    </div>
+                    <h4>Descanso mental</h4>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-circle">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </div>
+                    <h4>Sono</h4>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-circle">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M4 3v7a6 6 0 0 0 4 5.65v5.35a1 1 0 0 0 2 0v-5.35A6 6 0 0 0 14 10V3M9 3v4M19 3v17a1 1 0 0 1-2 0v-4H15v-4a4 4 0 0 1 4-4Z" />
+                        </svg>
+                    </div>
+                    <h4>Alimentação</h4>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-circle">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h4>Movimento</h4>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-circle">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h4>Redução de toxinas</h4>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-circle">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                        </svg>
+                    </div>
+                    <h4>Hidratação</h4>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-circle">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M3 7v13M21 7v13M2 9h20M2 17h20M6 9h4v4H6z" />
+                        </svg>
+                    </div>
+                    <h4>Descanso físico</h4>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-circle">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h4>Relacionamento</h4>
+                </div>
+            </div>
+
+            <p class="pillars-quote">Quando esses pilares se equilibram... o corpo responde.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>A transformação que acontece</h2>
+            </div>
+
+            <div class="compare">
+                <div class="compare-box">
+                    <h3>Antes</h3>
+                    <ul>
+                        <li>Dúvida constante a cada ciclo</li>
+                        <li>Ansiedade e picos de estresse acumulados</li>
+                        <li>Insegurança sobre o funcionamento do corpo</li>
+                        <li>Confusão com o excesso de informações na internet</li>
+                    </ul>
+                </div>
+
+                <div class="compare-box">
+                    <h3>Depois</h3>
+                    <ul>
+                        <li>Clareza total e direção assertiva</li>
+                        <li>Consciência, paciência e tranquilidade</li>
+                        <li>Conexão profunda com seus sinais biológicos</li>
+                        <li>Segurança emocional e acolhimento</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="center-text">
+                Você deixa de apenas tentar... e começa a se preparar de verdade.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Este e-book é para você que</h2>
+            </div>
+
+            <div class="target-grid">
+                <div class="target-item">✔ Deseja engravidar e quer se preparar da melhor forma</div>
+                <div class="target-item">✔ Quer entender melhor o próprio corpo e seus ciclos</div>
+                <div class="target-item">✔ Busca uma abordagem natural, integrativa e consciente</div>
+                <div class="target-item">✔ Deseja mais clareza, autonomia e direção no processo</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="not-for">
+        <div class="container">
+            <div class="section-title">
+                <h2>Este material não é para quem</h2>
+            </div>
+
+            <div class="grid-not-for">
+                <div class="card-not-for">
+                    <span class="icon-cross">×</span>
+                    <p>Busca soluções milagrosas e imediatas</p>
+                </div>
+                <div class="card-not-for">
+                    <span class="icon-cross">×</span>
+                    <p>Não deseja mudar hábitos antigos ou rotina</p>
+                </div>
+                <div class="card-not-for">
+                    <span class="icon-cross">×</span>
+                    <p>Procura atalhos sem comprometimento com a saúde</p>
+                </div>
+            </div>
+
+            <div class="offer-card">
+                <h3>E-book Fertilidade Consciente</h3>
+                <ul class="benefits-list">
+                    <li><span class="check">✓</span> Acesso imediato após a compra</li>
+                    <li><span class="check">✓</span> Conteúdo prático e aplicável</li>
+                    <li><span class="check">✓</span> Leitura leve e descomplicada</li>
+                    <li><span class="check">✓</span> Cronograma focado no dia a dia</li>
+                </ul>
+
+                <div class="price-box">
+                    <span class="price-value">R$ 47</span>
+                    <span class="price-label">Investimento Único</span>
+                </div>
+
+                <button class="btn-cta">Quero meu e-book agora</button>
+
+                <div class="secure-footer">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    Compra 100% segura e acesso imediato
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container about-grid">
+            <div class="about-image-wrapper">
+                <div class="about-image-container">
+                    <img src="img/gleide.jpg" alt="Gleide Castro - Acupunturista Especialista">
+                </div>
+            </div>
+
+            <div class="about-text">
+                <h2>Gleide Castro</h2>
+                <p class="about-subtitle">Acupunturista especializada em saúde da mulher</p>
+                <p class="about-description">
+                    Com anos de experiência em medicina tradicional chinesa e saúde integrativa, Gleide dedica-se a
+                    ajudar mulheres a compreenderem e prepararem seus corpos de forma natural e consciente para a
+                    maternidade. Sua abordagem combina conhecimento técnico com profunda sensibilidade e acolhimento.
+                </p>
+
+                <div class="about-pillars">
+                    <div class="pillar-item"><span class="pillar-dot"></span> Experiência clínica</div>
+                    <div class="pillar-item"><span class="pillar-dot"></span> Abordagem natural</div>
+                    <div class="pillar-item"><span class="pillar-dot"></span> Saúde feminina</div>
+                    <div class="pillar-item"><span class="pillar-dot"></span> Fertilidade consciente</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="section-title">
+            <h2>Perguntas frequentes</h2>
+        </div>
+
+        <div class="faq-wrapper">
+            <div class="faq-item">
+                <button class="faq-trigger">
+                    <span>Esse e-book substitui acompanhamento profissional?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-content">
+                    Não. Este material é educativo e complementar. Ele oferece informações valiosas sobre estilo de vida
+                    e fertilidade consciente, mas não substitui consultas e acompanhamento com médicos ou especialistas
+                    da saúde.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-trigger">
+                    <span>Funciona para qualquer mulher?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-content">
+                    O e-book é voltado para mulheres que desejam entender melhor seu corpo e preparar-se de forma
+                    natural para a maternidade. Cada corpo é único, e os resultados podem variar. Recomendamos sempre
+                    consultar um profissional de saúde para orientação personalizada.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-trigger">
+                    <span>Em quanto tempo vejo resultados?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-content">
+                    A fertilidade consciente é um processo gradual. Algumas mudanças podem ser percebidas em semanas,
+                    enquanto outras levam meses. O importante é a consistência e o compromisso com as práticas
+                    apresentadas no e-book.
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="final-banner">
+            <div class="final-banner-content">
+                <h3>Comece hoje sua jornada com mais consciência</h3>
+                <p>Seu corpo fala com você todos os dias. Talvez agora seja o momento ideal para começar a ouvir.</p>
+                <button class="btn-final">Quero começar agora</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Gleide Castro. Todos os direitos reservados.
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const faqItem = trigger.parentElement;
+            const content = faqItem.querySelector('.faq-content');
+            const arrow = trigger.querySelector('.faq-arrow');
+
+            // Verifica se o item clicado já está aberto
+            const isOpen = faqItem.classList.contains('active');
+
+            // OPCIONAL: Fecha todos os outros itens abertos antes de abrir o novo
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-content').style.maxHeight = null;
+                item.querySelector('.faq-arrow').textContent = '▼';
+            });
+
+            // Se não estava aberto, abre o item atual
+            if (!isOpen) {
+                faqItem.classList.add('active');
+                // Calcula a altura real do texto dinamicamente para uma transição suave
+                content.style.maxHeight = content.scrollHeight + "px";
+                arrow.textContent = '▲';
+            }
+        });
+    });
+</script>
